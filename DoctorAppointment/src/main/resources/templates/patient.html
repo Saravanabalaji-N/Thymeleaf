@@ -493,18 +493,19 @@ h2 {
 		style="border: 2px solid #ddd8ce; margin: 20px; padding: 10px; border-radius: 10px;">
 		<h2>Neurologist</h2>
 		<div class="container2" >
-			<div >
 
-				<div class="box">
+				<div class="box"  th:each="text: ${session.add}" th:if="${text.type == 'Neurologist'}">
+				
 					<img alt=""
 						src="img/male-doctor-with-stethoscope-vector-icon-circle-white-background_418020-88.avif"
 						height="180px" width="160px">
-			<p ></p>
+						
+						<p th:text="${text.username}"></p>
+						<p th:text="${text.mailid}"></p>
+							
 					<a href="appointmentbook.jsp?event=<%=list.getType()%>">Book
 						Appointment</a>
-				</div>
 			</div>
-
 		
 		</div>
 	</div>
@@ -514,14 +515,13 @@ h2 {
 		<h2>Cardiologist</h2>
 		<div class="container2">
 
-			<div >
-
-			
-
-				<div class="box">
+				<div class="box"  th:each="text: ${session.add}" th:if="${text.type == 'Cardiologist'}">
 					<img alt=""
 						src="img/male-doctor-with-stethoscope-vector-icon-circle-white-background_418020-88.avif"
 						height="180px" width="160px">
+				
+						<p th:text="${text.username}"></p>
+						<p th:text="${text.mailid}"></p>
 				
 					<a href="appointmentbook.jsp?event=<%=list.getType()%>">Book
 						Appointment</a>
@@ -530,7 +530,7 @@ h2 {
 			
 
 		</div>
-	</div>
+
 
 
 	<div
@@ -538,23 +538,21 @@ h2 {
 		<h2>Gastroenterologists</h2>
 		<div class="container2">
 
-			<div >
-
-
-				<div class="box">
+				<div class="box"  th:each="text: ${session.add}" th:if="${text.type == 'Gastroenterologists'}">
 					<img alt=""
 						src="img/male-doctor-with-stethoscope-vector-icon-circle-white-background_418020-88.avif"
 						height="180px" width="160px">
 
+						<p th:text="${text.username}"></p>
+						<p th:text="${text.mailid}"></p>
+						
 					<a href="appointmentbook.jsp?event=<%=list.getType()%>">Book
 						Appointment</a>
 				</div>
 			</div>
 
-
 		</div>
-	</div>
-	
+
 	<div
 		style="border: 2px solid #ddd8ce; margin: 20px; padding: 10px; border-radius: 10px;">
 		<h2>Dermatologist</h2>
@@ -563,10 +561,13 @@ h2 {
 			<div >
 
 
-				<div class="box" >
+				<div class="box"  th:each="text: ${session.add}" th:if="${text.type == 'Dermatologist'}">
 					<img alt=""
 						src="img/male-doctor-with-stethoscope-vector-icon-circle-white-background_418020-88.avif"
 						height="180px" width="160px">
+					
+						<p th:text="${text.username}"></p>
+						<p th:text="${text.mailid}"></p>
 					
 					<a href="appointmentbook.jsp?event=<%=list.getType()%>">Book
 						Appointment</a>

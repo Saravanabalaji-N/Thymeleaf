@@ -9,7 +9,7 @@
 		<version>3.2.8</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.chainsys.doctorappointment</groupId>
+	<groupId>com.example.doctorappointment</groupId>
 	<artifactId>DoctorAppointment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>DoctorAppointment</name>

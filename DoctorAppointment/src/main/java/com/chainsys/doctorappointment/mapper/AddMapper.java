@@ -23,7 +23,6 @@ public class AddMapper implements RowMapper<User> {
 		user.setUsername(name);
 		user.setMailid(mail);
 		user.setType(specalization);
-	
 		user.setId(id);
 		return user;
 	}

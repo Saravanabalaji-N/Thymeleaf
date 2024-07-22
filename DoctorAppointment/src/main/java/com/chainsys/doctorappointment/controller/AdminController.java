@@ -28,7 +28,6 @@ public class AdminController {
 		HttpSession session = reguest.getSession();
 		List<User> list = userDAO.adminview();
 		session.setAttribute("new", list);
-		System.out.println("im here");
 		return "admin";
 	}
 
