@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+
+.form-popup {
+	display: none;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+	padding: 10px;
+}
+
+.popup {
+	display: none;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+	padding: 10px;
+}
+.close {
+	position:absolute;
+	right:0;
+	padding:5px;
+	font-size:x-large;
+	font-weight:bold;
+	margin-right: 15px;
+
+}
+th {
+	padding: 15px;
+	background: #aaaaaa;
+}
+
+td {
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+
+
+<input type="submit" onclick="doctorOpen()" name="Patient" value="Doctor">
+<input type="button" onclick="patientopen()" name="profile" value="Patient"> 
+
+
+
+
+
+<div class="form-popup" id="myForm">
+<div class="close" onclick="patientClose()">&times;</div>
+<table>
+					<thead>
+						<tr>
+							<th>User Id</th>
+							<th>User Name</th>
+							<th>User Mail-Id</th>
+							<th>user profile</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+
+					<tbody>
+					
+						<tr>
+							<td><button>Accept</button></td>
+							<td><button>Decline</button></td>
+						</tr>
+
+					</tbody>
+
+				</table>		
+</div>
+
+
+<div class="popup" id="Form">
+<div class="close" onclick="doctorClose()">&times;</div>
+
+<table>
+					<thead>
+						<tr>
+							<th>User Id</th>
+							<th>User Name</th>
+							<th>User Mail-Id</th>
+							<th>user profile</th>
+							<th>user Specalization</th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+	
+
+					<tbody>
+					
+						<tr>
+
+							<td><button>Accept</button></td>
+							<td><button>Decline</button></td>
+						</tr>
+
+					</tbody>
+
+				</table>
+
+</div>
+
+
+<script type="text/javascript">
+
+function patientopen() {
+	document.getElementById("myForm").style.display = "block";
+	document.getElementById("Form").style.display = "none";
+	
+}
+
+function patientClose() {
+	document.getElementById("myForm").style.display = "none";
+}
+
+function doctorOpen() {
+	document.getElementById("Form").style.display = "block";
+	document.getElementById("myForm").style.display = "none";
+}
+
+function doctorClose() {
+	document.getElementById("Form").style.display = "none";
+}
+</script>
